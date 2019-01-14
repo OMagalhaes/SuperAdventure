@@ -11,12 +11,16 @@ namespace Engine
         public int gold { get; set; }
         public int experiencePoints { get; set; }
         public int level { get; set; }
+        public List<InventoryItem> Inventory { get; set; }
+        public List<PlayerQuest> Quests { get; set; }
 
         public Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int level) : base(currentHitPoints, maximumHitPoints)
         {
             this.gold = gold;
             this.experiencePoints = experiencePoints;
             this.level = level;
+            Inventory = new List<InventoryItem>();
+            Quests = new List<PlayerQuest>();
         }
     }
 }
